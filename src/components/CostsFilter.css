@@ -1,0 +1,60 @@
+.costs-filter {
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    /* Светло-серый фон */
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Перенос строк на маленьких экранах */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.costs-filter {
+    background-color: #333;
+    color: #eee;
+}
+
+.costs-filter__control {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 auto;
+    /* Растягиваем элементы */
+}
+
+.costs-filter select {
+    font: inherit;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .costs-filter {
+        flex-direction: column;
+        /* Вертикальное расположение */
+        align-items: flex-start;
+    }
+
+    .costs-filter__control {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.costs-filter select {
+    all: unset;
+    /* Отключить все стили */
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.costs-filter select {
+    position: relative;
+    z-index: 10;
+}

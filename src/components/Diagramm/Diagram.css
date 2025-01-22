@@ -1,0 +1,36 @@
+.diagram{
+    padding: 1rem;
+    border-radius: 12px;
+          
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    height: 10rem;
+    
+    background-color: #282c34;
+        /* Darker gray diagram background */
+        color: #eee;
+}
+
+.diagram-bar-container {
+    position: relative;
+    /* Для абсолютного позиционирования суммы */
+    margin-bottom: 10px;
+}
+
+.bar-cost {
+    position: absolute;
+    top: -20px;
+    /* Позиционирование над столбиком */
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+@media (max-width: 400px) {
+    .bar-cost {
+        font-size: 8px;
+        top: -15px;
+    }
+}

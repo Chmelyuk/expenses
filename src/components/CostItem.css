@@ -1,0 +1,72 @@
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    /* Added to allow the container to shrink */
+    flex-shrink: 1;
+}
+
+.cost-item__description {
+    flex: 1;
+    /* Allow this to take up available space */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 1rem;
+}
+
+.cost-item__price {
+    background-color: #0074d9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    /* Removed max-width, let flexbox handle sizing */
+    flex-shrink: 1;
+    /* Allow this to shrink if needed */
+}
+
+@media (min-width: 768px) {
+    .cost-item__price {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .cost-item {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Removed max-height, let flexbox handle height */
+    }
+
+    .cost-item__description {
+        font-size: 0.8rem;
+    }
+
+    .cost-item__price {
+        margin-left: 0;
+        align-self: flex-end;
+        font-size: 0.8rem;
+        flex-shrink: 1;
+    }
+}
+
+.cost-item__delete button {
+    background-color: #dc3545;
+    /* Red delete button */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    /* Space between price and button */
+}

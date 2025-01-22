@@ -1,0 +1,55 @@
+.card {
+    background-color: #282c34;
+    /* Darker gray card background */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    /* Subtle shadow */
+}
+
+
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background-color: #e9ecef;
+    border: 1px solid grey;
+    /* Перенос контента на маленьких экранах */
+}
+
+.cost-item__description {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    word-wrap: break-word;
+    /* Перенос текста внутри карточки */
+    text-align: left;
+    color: #282c34 !important;
+}
+
+.cost-item__price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    background-color: #0074d9;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cost-item {
+        flex-direction: column;
+        /* Вертикальное расположение */
+        align-items: flex-start;
+    }
+
+    .cost-item__price {
+        align-self: flex-end;
+        /* Цена будет внизу карточки */
+    }
+}

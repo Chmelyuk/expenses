@@ -1,0 +1,39 @@
+.new-cost__controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.new-cost__control input {
+    font: inherit;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.new-cost__actions button {
+    background-color: #0074d9;
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-cost__actions button:hover {
+    background-color: #005bb5;
+}
+select {
+    all: unset;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    display: block;
+    z-index: 9999;
+    position: relative;
+}

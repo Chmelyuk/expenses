@@ -1,0 +1,100 @@
+.new-cost {
+    background-color: #282c34;
+    color: #eee;
+    /* Белый фон */
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 90%;
+    /* Адаптивная ширина */
+    max-width: 600px;
+    /* Ограничение по ширине */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    align-items: center;
+}
+
+
+.new-cost button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background-color: #007bff;
+    /* Зеленый цвет */
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    
+
+
+    
+}
+
+.new-cost__controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Три равные колонки */
+    gap: 1rem;
+    /* Отступы между колонками */
+    align-items: center;
+    /* Выравнивание по центру */
+}
+
+.new-cost__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* Отступ между текстом и полем ввода */
+}
+
+.new-cost__control label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #969494;
+}
+
+.new-cost__control input {
+    font: inherit;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.new-cost__actions {
+    display: flex;
+    justify-content: center;
+    /* Центрирование кнопки */
+    margin-top: 1.5rem;
+}
+
+.new-cost__actions button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background-color: #007bff;
+    /* Зеленый цвет */
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+ 
+
+.new-cost__actions button:hover {
+    background-color: #002aff;
+}
+
+@media (max-width: 768px) {
+    .new-cost__controls {
+        grid-template-columns: 1fr;
+        /* В одну колонку на узких экранах */
+    }
+
+    .new-cost {
+        padding: 1rem;
+    }
+}
