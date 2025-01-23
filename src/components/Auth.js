@@ -11,7 +11,7 @@ const Auth = () => {
   const handleSignIn = async (email, password) => {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) alert(error.message);
-    else alert("Successfully logged in!");
+    
   };
 
   return (

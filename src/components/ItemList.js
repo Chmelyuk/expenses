@@ -1,5 +1,3 @@
-
-
 import './ItemList.css';
 import Card from './Card';
 import CostsFilter from './CostsFilter';
@@ -8,7 +6,9 @@ import CostList from './CostList';
 import CostDiagram from './CostDiagram';
 
 function ItemList(props) {
-    const [selectedYear, setSelectedYear] = useState('2024');
+    // Устанавливаем текущий год по умолчанию
+    const currentYear = new Date().getFullYear().toString();
+    const [selectedYear, setSelectedYear] = useState(currentYear);
 
     const yearChangeHandler = (year) => {
         console.log('Year updated in ItemList:', year); // Для отладки
@@ -25,7 +25,6 @@ function ItemList(props) {
             <Card className="costs">
                 <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler} />
                 <CostDiagram costs={filteredCosts} />
-                
             </Card>
             <CostList costs={filteredCosts} onDeleteCost={props.onDeleteCost} />
         </div>
@@ -33,4 +32,3 @@ function ItemList(props) {
 }
 
 export default ItemList;
-
